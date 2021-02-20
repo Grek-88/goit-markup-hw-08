@@ -1,0 +1,65 @@
+.subs-form {
+  .join {
+    font-size: 14px;
+    line-height: 1.1428;
+    text-transform: uppercase;
+
+    color: $color-light;
+
+    margin-top: 12px;
+  }
+}
+
+.subs-form-flex {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .button {
+    border: none;
+    margin-top: 0;
+    margin-left: 12px;
+    height: 50px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    cursor: pointer;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+    }
+  }
+
+  .subs-form-label {
+    position: absolute;
+    z-index: 1;
+    left: 16px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  #subs-email {
+    width: 358px;
+    height: 50px;
+    background: $color-background;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    padding-left: 65px;
+    color: $color-light;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      border: 2px solid $hover-accent;
+    }
+  }
+}

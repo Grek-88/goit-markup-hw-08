@@ -1,0 +1,36 @@
+.about-flex {
+  display: flex;
+
+  .about-item {
+    width: calc((100% - 90px) / 4);
+    /*  высчитываем ширину элементов так, чтобы поместилось по 4шт в ряд +маржин 30px, для будущего расширения контента */
+    margin-right: 30px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    .about-title {
+      font-weight: bold;
+      line-height: 1.1428;
+      text-transform: uppercase;
+      color: $fonts-accent-color;
+    }
+
+    .about-text {
+      line-height: 1.71;
+      color: $primary-font-color;
+    }
+
+    .about-icon-bg {
+      height: 120px;
+      background: #f5f4fa;
+      border-radius: 4px;
+      margin-bottom: 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

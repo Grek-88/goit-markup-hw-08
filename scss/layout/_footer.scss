@@ -1,0 +1,39 @@
+.footer {
+  background: $color-background;
+
+  .logo {
+    color: $color-light;
+  }
+
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  #subs-email:-webkit-autofill {
+    box-shadow: 0 0 0 30px $color-background inset;
+    -webkit-text-fill-color: $color-light;
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  .map {
+    font-style: normal;
+    color: $color-light;
+  }
+
+  .contacts {
+    font-style: normal;
+    line-height: 1.71;
+    color: $color-light;
+    opacity: 0.6;
+    margin-top: 10px;
+  }
+}
