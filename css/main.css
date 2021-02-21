@@ -482,6 +482,15 @@ hr {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -696,14 +705,19 @@ hr {
 }
 
 .footer-join .join {
+  text-align: center;
   font-size: 14px;
   line-height: 1.1428;
   text-transform: uppercase;
   color: #ffffff;
-  margin-top: 12px;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .join-icon-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -712,8 +726,7 @@ hr {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin-bottom: 60px;
 }
 
 .join-icon-flex .list-no-style:not(:last-child) {
@@ -725,6 +738,9 @@ hr {
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -744,11 +760,13 @@ hr {
 }
 
 .subs-form .join {
+  text-align: center;
   font-size: 14px;
   line-height: 1.1428;
   text-transform: uppercase;
   color: #ffffff;
-  margin-top: 12px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .subs-form-flex {
@@ -760,9 +778,11 @@ hr {
 
 .subs-form-flex .button {
   border: none;
-  margin-top: 0;
-  margin-left: 12px;
+  margin: 0 auto;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -782,13 +802,14 @@ hr {
   position: absolute;
   z-index: 1;
   left: 16px;
+  top: 15px;
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .subs-form-flex #subs-email {
-  width: 358px;
+  width: 450px;
   height: 50px;
   background: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -799,6 +820,7 @@ hr {
   border-radius: 4px;
   padding-left: 65px;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .subs-form-flex #subs-email:focus, .subs-form-flex #subs-email:hover {
@@ -1151,15 +1173,17 @@ hr {
 
 .team .team-title {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.1666;
+  font-size: 28px;
+  line-height: 1.178;
   text-align: center;
   color: #212121;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .team .list-no-style .item-team {
+  max-width: 450px;
+  margin: auto;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1167,10 +1191,18 @@ hr {
 }
 
 .team .list-no-style .item-team:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 479px) {
+  .team .list-no-style .item-team img {
+    width: 91.7vw;
+  }
 }
 
 .team .list-no-style .team-name {
+  font-size: 16px;
+  line-height: 1.187;
   font-weight: 500;
   color: #212121;
   margin-top: 30px;
@@ -1186,6 +1218,9 @@ hr {
 }
 
 .team .list-no-style .team-icon-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1194,31 +1229,40 @@ hr {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
-  margin-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .clients-flex {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  margin-top: 30px;
 }
 
 .clients-flex .clients {
-  width: 170px;
+  width: 210px;
   height: 90px;
 }
 
-.clients-flex .clients:not(:last-child) {
+.clients-flex .clients:nth-child(2n-1) {
   margin-right: 30px;
+}
+
+.clients-flex .clients:nth-child(-n + 4) {
+  margin-bottom: 30px;
 }
 
 .clients-flex .clients-item {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1247,6 +1291,10 @@ hr {
   background: #2f303a;
 }
 
+.footer .footer-address {
+  text-align: center;
+}
+
 .footer .logo {
   color: #ffffff;
 }
@@ -1267,11 +1315,15 @@ hr {
 }
 
 .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 20px;
+  line-height: 1.714;
 }
 
 .address .map {
@@ -1284,7 +1336,7 @@ hr {
   line-height: 1.71;
   color: #ffffff;
   opacity: 0.6;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .menu {

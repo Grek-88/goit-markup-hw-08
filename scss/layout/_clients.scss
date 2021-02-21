@@ -1,16 +1,21 @@
 .clients-flex {
-  // display: flex;
-  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
 
   padding: 0;
   margin: 0;
+  margin-top: 30px;
 
   .clients {
-    width: 170px;
+    width: 210px;
+    // width: 170px;
     height: 90px;
 
-    &:not(:last-child) {
+    &:nth-child(2n-1) {
       margin-right: 30px;
+    }
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
     }
   }
 
@@ -18,7 +23,7 @@
     border: 1px solid $icon-color;
     border-radius: 4px;
     height: 90px;
-    // display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
