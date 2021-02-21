@@ -2,12 +2,14 @@
   position: relative;
 
   font-weight: 500;
-  line-height: 1.1428;
+  font-size: 18px;
+  line-height: 1.166;
   letter-spacing: 0.02em;
 
-  min-height: 60px;
-
-  // transition: color $transition-duration-function;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.142;
+  }
 }
 
 .container {
@@ -18,28 +20,33 @@
   justify-content: space-between;
   height: 60px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     padding-top: 21px;
     padding-bottom: 21px;
 
-    // display: flex;
-    // align-items: center;
+    height: 80px;
   }
-  @media screen and (min-width: 1200px) {
+
+  @media screen and (min-width: $desktop) {
     padding-top: 24px;
     padding-bottom: 25px;
-
-    // display: flex;
-    align-items: center;
   }
+}
+.header-nav {
+  display: flex;
+  align-items: center;
 
-  .header-nav {
+  @media screen and (max-width: $tablet - 1px) {
     display: none;
 
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
+
+    background-color: $color-light;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
 
     &.is-open {
       display: block;
@@ -48,73 +55,117 @@
 }
 
 .nav-flex {
-}
+  .site-nav {
+    margin-top: 60px;
+    margin-bottom: 60px;
 
-.site-nav {
-  margin-top: 60px;
-  margin-bottom: 60px;
-
-  .item {
-    text-align: center;
-  }
-
-  .link {
-    position: relative;
-    display: inline-block;
-    color: $fonts-accent-color;
-
-    margin-bottom: 40px;
-
-    &:hover,
-    &:focus,
-    &.current {
-      color: $hover-accent;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      margin: 0;
+      align-items: center;
     }
 
-    &.current {
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 4px;
+    .item {
+      display: block;
+      text-align: center;
+      margin-bottom: 40px;
 
-        background: $hover-accent;
-        border-radius: 2px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
 
-        position: absolute;
-        top: 22px;
+      @media screen and (min-width: $tablet) {
+        margin-bottom: 0;
+        margin-right: 50px;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
-    // .item:not(:first-child) {
-    //   margin-left: 50px;
-    // }
-    // &.list-no-style {
-    //   display: none;
-    // }
+
+    .link {
+      position: relative;
+      display: inline-block;
+      color: $fonts-accent-color;
+
+      transition: color $transition-duration-function;
+
+      &:hover,
+      &:focus,
+      &.current {
+        color: $hover-accent;
+      }
+
+      &.current {
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 4px;
+
+          background: $hover-accent;
+          border-radius: 2px;
+
+          position: absolute;
+          top: 28px;
+
+          @media screen and (min-width: $tablet) {
+            top: 44px;
+          }
+        }
+      }
+    }
   }
 }
 
 .address-nav {
-  margin-left: auto;
   color: $primary-font-color;
-  // display: flex;
-  align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
 
-  .item:not(:first-child) {
-    margin-left: 50px;
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    line-height: 1.166;
+    margin-bottom: 0;
+    margin-left: 84px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-left: 305px;
+  }
+
+  .item {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-left: 30px;
+      margin-bottom: 0;
+    }
   }
 
   .navigation {
-    // display: flex;
     color: $primary-font-color;
 
-    align-items: center;
+    transition: color $transition-duration-function;
 
     .icon {
       margin-right: 10px;
       fill: $primary-font-color;
 
       transition: fill $transition-duration-function;
+
+      @media screen and (min-width: $tablet) {
+        margin-right: 8px;
+      }
     }
 
     &:hover > .icon {
@@ -127,6 +178,11 @@
     &:hover,
     &:focus {
       color: $hover-accent;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: center;
     }
   }
 }

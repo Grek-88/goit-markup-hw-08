@@ -6,6 +6,12 @@
   background-color: transparent;
   margin-left: auto;
 
+  &:focus,
+  &:hover {
+    fill: $hover-accent;
+    outline: none;
+  }
+
   .icon-close-mob {
     display: none;
   }
@@ -17,5 +23,9 @@
     .icon-menu-mob {
       display: none;
     }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
   }
 }
