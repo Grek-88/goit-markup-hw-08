@@ -13,59 +13,83 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header class="navigation">
+    <header class="header">
       <div class="container">
         <a href="./index.html" class="logo"
           ><span class="logo-color">Web</span>Studio</a
         >
-        <nav>
-          <ul class="list-no-style site-nav">
+        <button
+          type="button"
+          class="button-mob"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40px"
+            height="40px"
+            aria-label="Переключатель мобильногоменю"
+          >
+            <use
+              class="icon-menu-mob"
+              href="./img/symbol-defs.svg#icon-menu-mob"
+            ></use>
+            <use
+              class="icon-close-mob"
+              href="./img/symbol-defs.svg#icon-close-mob"
+            ></use>
+          </svg>
+        </button>
+        <div class="header-nav is-open" id="menu-container" data-menu>
+          <nav class="nav-flex">
+            <ul class="list-no-style site-nav">
+              <li class="item">
+                <a href="./index.html" class="current link">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item"><a href="#" class="link">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="list-no-style address-nav" data-menu>
             <li class="item">
-              <a href="./index.html" class="current navigation">Студия</a>
+              <a
+                href="mailto:info@example.com"
+                class="navigation"
+                aria-label="Отправить"
+                ><svg class="icon" width="16" height="12">
+                  <use href="./img/symbol-defs.svg#icon-envelope"></use>
+                </svg>
+                info@example.com</a
+              >
             </li>
             <li class="item">
-              <a href="./portfolio.html" class="navigation">Портфолио</a>
+              <a
+                href="tel:+380991111111"
+                class="navigation"
+                aria-label="Позвонить"
+                ><svg class="icon" width="10" height="16">
+                  <use href="./img/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="item"><a href="#" class="navigation">Контакты</a></li>
           </ul>
-        </nav>
-        <ul class="list-no-style address-nav">
-          <li class="item">
-            <a
-              href="mailto:info@example.com"
-              class="navigation"
-              aria-label="Отправить"
-              ><svg class="icon" width="16" height="12">
-                <use href="./img/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@example.com</a
-            >
-          </li>
-          <li class="item">
-            <a
-              href="tel:+380991111111"
-              class="navigation"
-              aria-label="Позвонить"
-              ><svg class="icon" width="10" height="16">
-                <use href="./img/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
       <hr />
     </header>
     <!-- /Шапка сайта -->
     <main>
       <!-- Лозунг сайта -->
-      <section class="hero">
+      <!-- <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
         <a href="#" class="button" data-modal-open>Заказать услугу</a>
-      </section>
+      </section> -->
       <!-- /Лозунг сайта -->
       <!-- About -->
-      <section>
+      <!-- <section>
         <div class="container">
           <ul class="list-no-style about-flex">
             <li class="about-item">
@@ -118,10 +142,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- /About -->
       <!-- Деятельность -->
-      <section class="work">
+      <!-- <section class="work">
         <div class="container">
           <h2 class="work-title">Чем мы занимаемся</h2>
           <ul class="list-no-style work-flex">
@@ -151,10 +175,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- /Деятельность -->
       <!-- Наша команда -->
-      <section class="team">
+      <!-- <section class="team">
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
           <ul class="list-no-style">
@@ -320,10 +344,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- /Наша команда -->
       <!-- Постоянные клиенты -->
-      <section>
+      <!-- <section>
         <div class="container">
           <h2 class="team-title">Постоянные клиенты</h2>
           <ul class="clients-flex">
@@ -371,10 +395,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- /Постоянные клиенты -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer-address">
           <a href="./index.html" class="logo"
@@ -494,6 +518,7 @@
         </form>
       </div>
     </div>
-    <script src="./madal.js"></script>
+    <script src="./js/madal.js"></script> -->
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 .about-flex {
-  display: flex;
+  // display: flex;
 
   .about-item {
     width: calc((100% - 90px) / 4);
@@ -28,7 +28,7 @@
       border-radius: 4px;
       margin-bottom: 30px;
 
-      display: flex;
+      // display: flex;
       align-items: center;
       justify-content: center;
     }

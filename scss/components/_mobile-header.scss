@@ -1,0 +1,21 @@
+.button-mob {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+
+  .icon-close-mob {
+    display: none;
+  }
+
+  &.is-open {
+    .icon-close-mob {
+      display: block;
+    }
+    .icon-menu-mob {
+      display: none;
+    }
+  }
+}
