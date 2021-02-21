@@ -10,28 +10,29 @@
     font-size: 14px;
     line-height: 1.142;
   }
+
+  .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 21px;
+      padding-bottom: 21px;
+
+      height: 80px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 24px;
+      padding-bottom: 25px;
+    }
+  }
 }
 
-.container {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-
-  @media screen and (min-width: $tablet) {
-    padding-top: 21px;
-    padding-bottom: 21px;
-
-    height: 80px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    padding-top: 24px;
-    padding-bottom: 25px;
-  }
-}
 .header-nav {
   display: flex;
   align-items: center;
@@ -111,7 +112,7 @@
           top: 28px;
 
           @media screen and (min-width: $tablet) {
-            top: 44px;
+            top: 45px;
           }
         }
       }
