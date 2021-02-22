@@ -374,6 +374,12 @@ a {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 94px 15px;
+  }
+}
+
 hr {
   margin: 0;
   height: 1px;
@@ -771,10 +777,12 @@ hr {
 }
 
 .subs-form-flex {
+  max-width: 450px;
   position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
 }
 
 .subs-form-flex .button {
@@ -809,14 +817,9 @@ hr {
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (min-width: 768px) {
-  .subs-form-flex .subs-form-label {
-    left: 196px;
-  }
-}
-
 .subs-form-flex #subs-email {
-  width: 100%;
+  min-width: 100%;
+  max-width: 450px;
   height: 50px;
   background: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -875,6 +878,7 @@ hr {
   .header .container {
     padding-top: 21px;
     padding-bottom: 21px;
+    width: 768px;
     height: 80px;
   }
 }
@@ -883,6 +887,7 @@ hr {
   .header .container {
     padding-top: 24px;
     padding-bottom: 25px;
+    width: 1200px;
   }
 }
 
@@ -908,6 +913,12 @@ hr {
   }
   .header-nav.is-open {
     display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav {
+    z-index: 100;
   }
 }
 
@@ -1083,6 +1094,40 @@ hr {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/tablet/bg-hero-tablet.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/tablet/bg-hero-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/tablet/bg-hero-tablet@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/tablet/bg-hero-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/desktop/background-hero-desktop.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/desktop/background-hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/desktop/background-hero-desktop@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/desktop/background-hero-desktop@2x.jpg");
+  }
+}
+
 .hero-title {
   font-weight: 900;
   font-size: 26px;
@@ -1096,12 +1141,45 @@ hr {
   margin: auto;
 }
 
-.about-flex .about-item {
-  /*  высчитываем ширину элементов так, чтобы поместилось по 4шт в ряд +маржин 30px, для будущего расширения контента */
+@media screen and (min-width: 768px) {
+  .about-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
+    width: 738px;
+  }
 }
 
-.about-flex .about-item:nth-child(4n) {
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .about-flex {
+    width: 1170px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .about-flex .about-item {
+    width: calc((100% - 30px) / 2);
+  }
+  .about-flex .about-item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+  .about-flex .about-item:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-flex .about-item {
+    width: calc((100% - 90px) / 4);
+    /*  высчитываем ширину элементов так, чтобы поместилось по 4шт в ряд +маржин 30px, для будущего расширения контента */
+    margin-right: 30px;
+  }
+  .about-flex .about-item:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 
 .about-flex .about-item .about-title {
@@ -1110,12 +1188,13 @@ hr {
   line-height: 1.1428;
   text-transform: uppercase;
   color: #212121;
-  text-align: center;
+  text-align: start;
 }
 
 .about-flex .about-item .about-text {
   line-height: 1.71;
   color: #757575;
+  text-align: start;
 }
 
 .about-flex .about-item .about-icon-bg {
@@ -1357,14 +1436,20 @@ hr {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .menu .menu-item:not(:last-child) {
   margin-right: 8px;
+}
+
+.menu .menu-item:nth-child(-n + 3) {
+  margin-bottom: 15px;
 }
 
 .menu .menu-item .menu-list {
@@ -1385,15 +1470,9 @@ hr {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.flex-portfolio {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .item-portfolio {
-  width: calc((100% - 60px) / 3);
-  /*  высчитываем ширину элементов так, чтобы поместилось по 3шт в ряд +маржин 30px, для будущего расширения контента */
-  margin-right: 30px;
+  margin: 0 auto;
+  width: 450px;
   margin-bottom: 30px;
 }
 
@@ -1411,7 +1490,7 @@ hr {
   left: 0;
   bottom: -100%;
   margin: 0;
-  width: 370px;
+  width: 450px;
   height: 294px;
   padding: 63px 24px;
   font-size: 18px;
@@ -1440,6 +1519,7 @@ hr {
 }
 
 .item-portfolio:hover .description-products {
+  text-align: left;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }

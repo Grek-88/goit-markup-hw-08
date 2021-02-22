@@ -13,9 +13,11 @@
 }
 
 .subs-form-flex {
+  max-width: 450px;
   position: relative;
   // display: flex;
   align-items: center;
+  margin: 0 auto;
 
   .button {
     border: none;
@@ -44,14 +46,11 @@
     font-size: 16px;
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
-
-    @media screen and (min-width: 768px) {
-      left: 196px;
-    }
   }
 
   #subs-email {
-    width: 100%;
+    min-width: 100%;
+    max-width: 450px;
     height: 50px;
     background: $color-background;
     border: 1px solid rgba(255, 255, 255, 0.3);

@@ -27,6 +27,10 @@ a {
   padding: 60px 15px;
   margin: auto;
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 15px;
+  }
 }
 
 hr {
