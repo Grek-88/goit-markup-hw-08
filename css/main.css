@@ -1405,13 +1405,18 @@ hr {
 }
 
 .clients-flex .clients {
-  width: calc((100% - 6 * 15px) / 2);
   margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
   .clients-flex .clients {
     width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-flex .clients {
+    width: 170px;
   }
 }
 
@@ -1446,6 +1451,18 @@ hr {
   fill: #afb1b8;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .clients-flex .clients-item {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-flex .clients-item {
+    width: 170px;
+  }
 }
 
 .footer {

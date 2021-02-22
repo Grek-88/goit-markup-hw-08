@@ -15,11 +15,14 @@
 
   .clients {
     // width: 210px;
-    width: calc((100% - 6 * 15px) / 2);
+    // width: calc((100% - 6 * 15px) / 2);
     margin: 15px;
 
     @media screen and (min-width: $tablet) {
       width: 226px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 170px;
     }
   }
 
@@ -32,7 +35,6 @@
     justify-content: center;
 
     width: 210px;
-    // width: 170px;
     height: 90px;
 
     transition: $transition-duration-function;
@@ -49,6 +51,13 @@
     .icon-clients {
       fill: $icon-color;
       transition: $transition-duration-function;
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 226px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 170px;
     }
   }
   // @media screen and (min-width: $tablet) {
