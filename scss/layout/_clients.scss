@@ -1,22 +1,19 @@
+.title-clients {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
 .clients-flex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
   padding: 0;
-  margin: 0;
-  margin-top: 30px;
+  margin: -15px;
 
   .clients {
     width: 210px;
-    // width: 170px;
-    height: 90px;
-
-    &:nth-child(2n-1) {
-      margin-right: 30px;
-    }
-    &:nth-child(-n + 4) {
-      margin-bottom: 30px;
-    }
+    margin: 15px;
   }
 
   .clients-item {
@@ -26,6 +23,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 210px;
+    // width: 170px;
+    height: 90px;
 
     transition: $transition-duration-function;
 
