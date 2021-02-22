@@ -150,12 +150,23 @@
           <h2 class="work-title">Чем мы занимаемся</h2>
           <ul class="list-no-style work-flex">
             <li class="work-item">
-              <img src="./img/typing.jpg" alt="печатет на клаве" />
+              <img
+                srcset="
+                  ./img/desktop/typing-desktop.jpg    1x,
+                  ./img/desktop/typing-desktop@2x.jpg 2x
+                "
+                src="./img/desktop/typing-desktop.jpg"
+                alt="печатет на клаве"
+              />
               <div class="description">Десктопные приложения</div>
             </li>
             <li class="work-item">
               <img
-                src="./img/mobila-noyt.jpg"
+                srcset="
+                  ./img/desktop/noyt-desktop.jpg    1x,
+                  ./img/desktop/noyt-desktop@2x.jpg 2x
+                "
+                src="./img/desktop/noyt-desktop.jpg"
                 alt="Мобильный"
                 width="370"
                 height="294"
@@ -166,7 +177,11 @@
             </li>
             <li class="work-item">
               <img
-                src="./img/tablet.jpg"
+                srcset="
+                  ./img/desktop/tablet-desktop.jpg    1x,
+                  ./img/desktop/tablet-desktop@2x.jpg 2x
+                "
+                src="./img/desktop/tablet-desktop.jpg"
                 alt="Планшет"
                 width="370"
                 height="294"
@@ -181,7 +196,7 @@
       <section class="team">
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
-          <ul class="list-no-style">
+          <ul class="list-no-style team-group">
             <li class="item-team">
               <picture>
                 <source
@@ -248,14 +263,37 @@
               </ul>
             </li>
             <li class="item-team">
-              <img
-                srcset="
-                  ./img/mobile/olga-mob.jpg    1x,
-                  ./img/mobile/olga-mob@2x.jpg 2x
-                "
-                src="./img/mobile/olga-mob.jpg"
-                alt="Фото Ольга Репина"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/desktop/olga-desktop.jpg    1x,
+                    ./img/desktop/olga-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/olga-tablet.jpg    1x,
+                    ./img/tablet/olga-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/mobile/olga-mob.jpg    1x,
+                    ./img/mobile/olga-mob@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  srcset="
+                    ./img/mobile/olga-mob.jpg    1x,
+                    ./img/mobile/olga-mob@2x.jpg 2x
+                  "
+                  src="./img/mobile/olga-mob.jpg"
+                  alt="Фото Ольга Репина"
+                />
+              </picture>
               <h3 class="team-name">Ольга Репина</h3>
               <p class="profession">Frontend Developer</p>
               <ul class="team-icon-flex">
@@ -290,14 +328,37 @@
               </ul>
             </li>
             <li class="item-team">
-              <img
-                srcset="
-                  ./img/mobile/nik-mob.jpg    1x,
-                  ./img/mobile/nik-mob@2x.jpg 2x
-                "
-                src="./img/mobile/nik-mob.jpg"
-                alt="Фото Николай Тарасов"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/desktop/nik-desktop.jpg    1x,
+                    ./img/desktop/nik-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/nik-tablet.jpg    1x,
+                    ./img/tablet/nik-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/mobile/nik-mob.jpg    1x,
+                    ./img/mobile/nik-mob@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  srcset="
+                    ./img/mobile/nik-mob.jpg    1x,
+                    ./img/mobile/nik-mob@2x.jpg 2x
+                  "
+                  src="./img/mobile/nik-mob.jpg"
+                  alt="Фото Николай Тарасов"
+                />
+              </picture>
               <h3 class="team-name">Николай Тарасов</h3>
               <p class="profession">Marketing</p>
               <ul class="team-icon-flex">
@@ -332,14 +393,37 @@
               </ul>
             </li>
             <li class="item-team">
-              <img
-                srcset="
-                  ./img/mobile/misha-mob.jpg    1x,
-                  ./img/mobile/misha-mob@2x.jpg 2x
-                "
-                src="./img/mobile/misha-mob.jpg"
-                alt="Фото Михаил Ермаков"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/desktop/misha-desktop.jpg    1x,
+                    ./img/desktop/misha-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/misha-tablet.jpg    1x,
+                    ./img/tablet/misha-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/mobile/misha-mob.jpg    1x,
+                    ./img/mobile/misha-mob@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  srcset="
+                    ./img/mobile/misha-mob.jpg    1x,
+                    ./img/mobile/misha-mob@2x.jpg 2x
+                  "
+                  src="./img/mobile/misha-mob.jpg"
+                  alt="Фото Михаил Ермаков"
+                />
+              </picture>
               <h3 class="team-name">Михаил Ермаков</h3>
               <p class="profession">UI Designer</p>
               <ul class="team-icon-flex">

@@ -16,7 +16,7 @@
   }
 
   .work-flex {
-    // display: flex;
+    display: flex;
     justify-content: space-between;
   }
 
@@ -41,5 +41,9 @@
       position: absolute;
       bottom: 0;
     }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: block;
   }
 }
