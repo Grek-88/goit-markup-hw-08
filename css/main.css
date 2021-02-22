@@ -1678,9 +1678,55 @@ hr {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+@media screen and (min-width: 768px) {
+  .menu .menu-item:nth-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu {
+    margin-bottom: 50px;
+  }
+}
+
+.set-center {
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+@media screen and (min-width: 768px) {
+  .set-center .flex-portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .set-center {
+    max-width: 1170px;
+  }
+}
+
 .item-portfolio {
   margin: 0 auto;
   width: 450px;
+}
+
+.item-portfolio:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -1713,12 +1759,16 @@ hr {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.item-portfolio:nth-child(3n) {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .item-portfolio .description-products {
+    width: 354px;
+  }
 }
 
-.item-portfolio:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .item-portfolio .description-products {
+    width: 370px;
+  }
 }
 
 .item-portfolio:hover {
@@ -1742,6 +1792,7 @@ hr {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  height: 110px;
 }
 
 .item-portfolio .item-portfolio-border .products-title {
@@ -1750,10 +1801,23 @@ hr {
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
+  text-align: start;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 4px;
   margin-left: 24px;
-  margin-right: 24px;
+  width: 402px;
+}
+
+@media screen and (min-width: 768px) {
+  .item-portfolio .item-portfolio-border .products-title {
+    width: 306px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .item-portfolio .item-portfolio-border .products-title {
+    width: 322px;
+  }
 }
 
 .item-portfolio .item-portfolio-border .products-text {
@@ -1763,6 +1827,39 @@ hr {
   margin-top: 4px;
   margin-bottom: 20px;
   margin-left: 24px;
-  margin-right: 24px;
+  text-align: start;
+}
+
+@media screen and (min-width: 1200px) {
+  .item-portfolio .item-portfolio-border {
+    width: 370px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .item-portfolio {
+    width: auto;
+    margin: 15px;
+  }
+  .item-portfolio:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .item-portfolio:last-child {
+    margin-bottom: 0;
+  }
+  .item-portfolio:nth-child(-n + 2) .item-portfolio-border {
+    height: 146px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .item-portfolio {
+    width: calc((100% - 6 * 15px) / 3);
+    /*  высчитываем ширину элементов так, чтобы поместилось по 3шт в ряд +маржин 30px, для будущего расширения контента */
+    margin: 15px;
+  }
+  .item-portfolio:nth-last-child(n - 3) {
+    margin-bottom: 15px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
