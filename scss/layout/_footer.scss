@@ -3,6 +3,14 @@
 
   .footer-address {
     text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      margin-left: 76px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-left: 0;
+      text-align: start;
+    }
   }
 
   .logo {
@@ -13,8 +21,18 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    // display: flex;
     flex-direction: row;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: $desktop) {
+      justify-content: start;
+    }
   }
 
   #subs-email:-webkit-autofill {

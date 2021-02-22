@@ -12,6 +12,23 @@
 
     margin-top: 60px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 89px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+    margin-right: 0;
   }
 }
 
@@ -48,5 +65,9 @@
     .icon-team {
       fill: $color-light;
     }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
   }
 }

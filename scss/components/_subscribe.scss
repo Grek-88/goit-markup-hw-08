@@ -9,13 +9,28 @@
 
     margin-top: 0;
     margin-bottom: 20px;
+
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    margin-left: 93px;
+    text-align: start;
   }
 }
 
 .subs-form-flex {
   max-width: 450px;
   position: relative;
-  // display: flex;
   align-items: center;
   margin: 0 auto;
 
@@ -69,8 +84,22 @@
       border: 2px solid $hover-accent;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       width: 450px;
     }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    flex-wrap: nowrap;
   }
 }
