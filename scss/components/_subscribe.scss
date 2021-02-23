@@ -1,24 +1,42 @@
 .subs-form {
   .join {
+    text-align: center;
     font-size: 14px;
     line-height: 1.1428;
     text-transform: uppercase;
 
     color: $color-light;
 
-    margin-top: 12px;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    margin-left: 93px;
+    text-align: start;
   }
 }
 
 .subs-form-flex {
+  max-width: 450px;
   position: relative;
-  display: flex;
   align-items: center;
+  margin: 0 auto;
 
   .button {
     border: none;
-    margin-top: 0;
-    margin-left: 12px;
+    margin: 0 auto;
     height: 50px;
 
     display: flex;
@@ -34,18 +52,9 @@
     }
   }
 
-  .subs-form-label {
-    position: absolute;
-    z-index: 1;
-    left: 16px;
-
-    font-size: 16px;
-    line-height: 1.25;
-    color: rgba(255, 255, 255, 0.6);
-  }
-
-  #subs-email {
-    width: 358px;
+  .subs-email {
+    min-width: 100%;
+    max-width: 450px;
     height: 50px;
     background: $color-background;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -53,13 +62,37 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
 
-    padding-left: 65px;
+    padding: 15px 16px;
     color: $color-light;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
 
     &:focus,
     &:hover {
       outline: none;
       border: 2px solid $hover-accent;
     }
+
+    @media screen and (min-width: $tablet) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    flex-wrap: nowrap;
   }
 }

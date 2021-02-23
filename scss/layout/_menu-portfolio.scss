@@ -4,13 +4,17 @@
   line-height: 1.62;
 
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
   .menu-item {
     &:not(:last-child) {
       margin-right: 8px;
+    }
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
     }
 
     .menu-list {
@@ -32,5 +36,19 @@
           0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
       }
     }
+
+    @media screen and (min-width: $tablet) {
+      &:nth-child(-n + 3) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
   }
 }

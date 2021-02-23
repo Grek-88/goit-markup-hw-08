@@ -1,0 +1,31 @@
+.button-mob {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+
+  &:focus,
+  &:hover {
+    fill: $hover-accent;
+    outline: none;
+  }
+
+  .icon-close-mob {
+    display: none;
+  }
+
+  &.is-open {
+    .icon-close-mob {
+      display: block;
+    }
+    .icon-menu-mob {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}

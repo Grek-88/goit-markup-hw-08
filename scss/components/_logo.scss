@@ -2,14 +2,18 @@
 .logo:focus,
 .logo:hover {
   font-family: Raleway;
+  font-style: normal;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.192;
-  letter-spacing: 0.03em;
+  font-size: 24px;
+  line-height: 1.166;
   color: $color-logo;
 
-  margin-right: 90px;
   .logo-color {
     color: $hover-accent;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 1.192;
   }
 }

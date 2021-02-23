@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ДЗ7</title>
+    <title>ДЗ8</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -13,46 +13,70 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header class="navigation">
+    <header class="header">
       <div class="container">
         <a href="./index.html" class="logo"
           ><span class="logo-color">Web</span>Studio</a
         >
-        <nav>
-          <ul class="list-no-style site-nav">
+        <button
+          type="button"
+          class="button-mob"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40px"
+            height="40px"
+            aria-label="Переключатель мобильногоменю"
+          >
+            <use
+              class="icon-menu-mob"
+              href="./img/symbol-defs.svg#icon-menu-mob"
+            ></use>
+            <use
+              class="icon-close-mob"
+              href="./img/symbol-defs.svg#icon-close-mob"
+            ></use>
+          </svg>
+        </button>
+        <div class="header-nav" id="menu-container" data-menu>
+          <nav class="nav-flex">
+            <ul class="list-no-style site-nav">
+              <li class="item">
+                <a href="./index.html" class="current link">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item"><a href="#" class="link">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="list-no-style address-nav" data-menu>
             <li class="item">
-              <a href="./index.html" class="current navigation">Студия</a>
+              <a
+                href="mailto:info@example.com"
+                class="navigation"
+                aria-label="Отправить"
+                ><svg class="icon" width="16" height="12">
+                  <use href="./img/symbol-defs.svg#icon-envelope"></use>
+                </svg>
+                info@example.com</a
+              >
             </li>
             <li class="item">
-              <a href="./portfolio.html" class="navigation">Портфолио</a>
+              <a
+                href="tel:+380991111111"
+                class="navigation"
+                aria-label="Позвонить"
+                ><svg class="icon" width="10" height="16">
+                  <use href="./img/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="item"><a href="#" class="navigation">Контакты</a></li>
           </ul>
-        </nav>
-        <ul class="list-no-style address-nav">
-          <li class="item">
-            <a
-              href="mailto:info@example.com"
-              class="navigation"
-              aria-label="Отправить"
-              ><svg class="icon" width="16" height="12">
-                <use href="./img/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@example.com</a
-            >
-          </li>
-          <li class="item">
-            <a
-              href="tel:+380991111111"
-              class="navigation"
-              aria-label="Позвонить"
-              ><svg class="icon" width="10" height="16">
-                <use href="./img/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
       <hr />
     </header>
@@ -126,12 +150,23 @@
           <h2 class="work-title">Чем мы занимаемся</h2>
           <ul class="list-no-style work-flex">
             <li class="work-item">
-              <img src="./img/typing.jpg" alt="печатет на клаве" />
+              <img
+                srcset="
+                  ./img/desktop/typing-desktop.jpg    1x,
+                  ./img/desktop/typing-desktop@2x.jpg 2x
+                "
+                src="./img/desktop/typing-desktop.jpg"
+                alt="печатет на клаве"
+              />
               <div class="description">Десктопные приложения</div>
             </li>
             <li class="work-item">
               <img
-                src="./img/mobila-noyt.jpg"
+                srcset="
+                  ./img/desktop/noyt-desktop.jpg    1x,
+                  ./img/desktop/noyt-desktop@2x.jpg 2x
+                "
+                src="./img/desktop/noyt-desktop.jpg"
                 alt="Мобильный"
                 width="370"
                 height="294"
@@ -142,7 +177,11 @@
             </li>
             <li class="work-item">
               <img
-                src="./img/tablet.jpg"
+                srcset="
+                  ./img/desktop/tablet-desktop.jpg    1x,
+                  ./img/desktop/tablet-desktop@2x.jpg 2x
+                "
+                src="./img/desktop/tablet-desktop.jpg"
                 alt="Планшет"
                 width="370"
                 height="294"
@@ -157,14 +196,39 @@
       <section class="team">
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
-          <ul class="list-no-style">
+          <ul class="list-no-style team-group">
             <li class="item-team">
-              <img
-                src="./img/igor.jpg"
-                alt="Фото Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/desktop/igor-desktop.jpg    1x,
+                    ./img/desktop/igor-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/igor-tablet.jpg    1x,
+                    ./img/tablet/igor-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/mobile/igor-mob.jpg    1x,
+                    ./img/mobile/igor-mob@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  srcset="
+                    ./img/mobile/igor-mob.jpg    1x,
+                    ./img/mobile/igor-mob@2x.jpg 2x
+                  "
+                  src="./img/mobile/igor-mob.jpg"
+                  alt="Фото Игорь Демьяненко"
+                />
+              </picture>
               <h3 class="team-name">Игорь Демьяненко</h3>
               <p class="profession">Product Designer</p>
               <ul class="team-icon-flex">
@@ -199,12 +263,37 @@
               </ul>
             </li>
             <li class="item-team">
-              <img
-                src="./img/olga.jpg"
-                alt="Фото Ольга Репина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/desktop/olga-desktop.jpg    1x,
+                    ./img/desktop/olga-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/olga-tablet.jpg    1x,
+                    ./img/tablet/olga-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/mobile/olga-mob.jpg    1x,
+                    ./img/mobile/olga-mob@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  srcset="
+                    ./img/mobile/olga-mob.jpg    1x,
+                    ./img/mobile/olga-mob@2x.jpg 2x
+                  "
+                  src="./img/mobile/olga-mob.jpg"
+                  alt="Фото Ольга Репина"
+                />
+              </picture>
               <h3 class="team-name">Ольга Репина</h3>
               <p class="profession">Frontend Developer</p>
               <ul class="team-icon-flex">
@@ -239,12 +328,37 @@
               </ul>
             </li>
             <li class="item-team">
-              <img
-                src="./img/nik.jpg"
-                alt="Фото Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/desktop/nik-desktop.jpg    1x,
+                    ./img/desktop/nik-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/nik-tablet.jpg    1x,
+                    ./img/tablet/nik-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/mobile/nik-mob.jpg    1x,
+                    ./img/mobile/nik-mob@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  srcset="
+                    ./img/mobile/nik-mob.jpg    1x,
+                    ./img/mobile/nik-mob@2x.jpg 2x
+                  "
+                  src="./img/mobile/nik-mob.jpg"
+                  alt="Фото Николай Тарасов"
+                />
+              </picture>
               <h3 class="team-name">Николай Тарасов</h3>
               <p class="profession">Marketing</p>
               <ul class="team-icon-flex">
@@ -279,12 +393,37 @@
               </ul>
             </li>
             <li class="item-team">
-              <img
-                src="./img/misha.jpg"
-                alt="Фото Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/desktop/misha-desktop.jpg    1x,
+                    ./img/desktop/misha-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/misha-tablet.jpg    1x,
+                    ./img/tablet/misha-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/mobile/misha-mob.jpg    1x,
+                    ./img/mobile/misha-mob@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  srcset="
+                    ./img/mobile/misha-mob.jpg    1x,
+                    ./img/mobile/misha-mob@2x.jpg 2x
+                  "
+                  src="./img/mobile/misha-mob.jpg"
+                  alt="Фото Михаил Ермаков"
+                />
+              </picture>
               <h3 class="team-name">Михаил Ермаков</h3>
               <p class="profession">UI Designer</p>
               <ul class="team-icon-flex">
@@ -325,7 +464,7 @@
       <!-- Постоянные клиенты -->
       <section>
         <div class="container">
-          <h2 class="team-title">Постоянные клиенты</h2>
+          <h2 class="team-title title-clients">Постоянные клиенты</h2>
           <ul class="clients-flex">
             <li class="list-no-style clients">
               <a href="#" class="clients-item">
@@ -421,11 +560,20 @@
             </li>
           </ul>
         </div>
-        <form name="subs-form" class="subs-form" autocomplete="on">
+        <form
+          name="subs-form"
+          class="subs-form"
+          autocomplete="on"
+          placeholder="E-mail"
+        >
           <h3 class="join">Подпишитесь на рассылку</h3>
           <div class="subs-form-flex">
-            <label for="subs-email" class="subs-form-label">E-mail</label>
-            <input type="email" name="email" id="subs-email" />
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              class="subs-email"
+            />
             <button type="submit" class="button">
               Подписаться
               <svg>
@@ -494,6 +642,7 @@
         </form>
       </div>
     </div>
-    <script src="./madal.js"></script>
+    <script src="./js/madal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

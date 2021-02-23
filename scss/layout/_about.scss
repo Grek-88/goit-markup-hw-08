@@ -1,25 +1,53 @@
 .about-flex {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 738px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1170px;
+  }
 
   .about-item {
-    width: calc((100% - 90px) / 4);
-    /*  высчитываем ширину элементов так, чтобы поместилось по 4шт в ряд +маржин 30px, для будущего расширения контента */
-    margin-right: 30px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      width: calc((100% - 30px) / 2);
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
+      &:nth-child(-n + 2) {
+        margin-bottom: 30px;
+      }
+    }
 
-    &:nth-child(4n) {
-      margin-right: 0;
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 90px) / 4);
+      /*  высчитываем ширину элементов так, чтобы поместилось по 4шт в ряд +маржин 30px, для будущего расширения контента */
+      margin-right: 30px;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
     }
 
     .about-title {
+      font-size: 14px;
       font-weight: bold;
       line-height: 1.1428;
       text-transform: uppercase;
       color: $fonts-accent-color;
+      text-align: center;
+
+      @media screen and (min-width: $tablet) {
+        text-align: start;
+      }
     }
 
     .about-text {
       line-height: 1.71;
       color: $primary-font-color;
+      text-align: start;
     }
 
     .about-icon-bg {
