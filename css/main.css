@@ -371,7 +371,6 @@ a {
   max-width: 1200px;
   padding: 60px 15px;
   margin: auto;
-  text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1266,7 +1265,13 @@ hr {
   line-height: 1.1428;
   text-transform: uppercase;
   color: #212121;
-  text-align: start;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .about-flex .about-item .about-title {
+    text-align: start;
+  }
 }
 
 .about-flex .about-item .about-text {

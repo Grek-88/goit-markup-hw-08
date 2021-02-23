@@ -37,7 +37,11 @@
       line-height: 1.1428;
       text-transform: uppercase;
       color: $fonts-accent-color;
-      text-align: start;
+      text-align: center;
+
+      @media screen and (min-width: $tablet) {
+        text-align: start;
+      }
     }
 
     .about-text {
