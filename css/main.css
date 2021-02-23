@@ -867,17 +867,7 @@ hr {
   margin-left: 10px;
 }
 
-.subs-form-flex .subs-form-label {
-  position: absolute;
-  z-index: 1;
-  left: 16px;
-  top: 15px;
-  font-size: 16px;
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.subs-form-flex #subs-email {
+.subs-form-flex .subs-email {
   min-width: 100%;
   max-width: 450px;
   height: 50px;
@@ -888,24 +878,27 @@ hr {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  padding-left: 65px;
+  padding: 15px 16px;
   color: #ffffff;
   margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.subs-form-flex #subs-email:focus, .subs-form-flex #subs-email:hover {
+.subs-form-flex .subs-email:focus, .subs-form-flex .subs-email:hover {
   outline: none;
   border: 2px solid #2196f3;
 }
 
 @media screen and (min-width: 768px) {
-  .subs-form-flex #subs-email {
+  .subs-form-flex .subs-email {
     width: 450px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .subs-form-flex #subs-email {
+  .subs-form-flex .subs-email {
     margin-right: 12px;
     margin-bottom: 0;
   }
@@ -1221,7 +1214,7 @@ hr {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  width: 360px;
+  max-width: 360px;
   min-height: 84px;
   margin: auto;
 }
@@ -1609,7 +1602,7 @@ hr {
   }
 }
 
-.footer #subs-email:-webkit-autofill {
+.footer .subs-email:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px #2f303a inset;
           box-shadow: 0 0 0 30px #2f303a inset;
   -webkit-text-fill-color: #ffffff;

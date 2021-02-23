@@ -35,7 +35,7 @@
     }
   }
 
-  #subs-email:-webkit-autofill {
+  .subs-email:-webkit-autofill {
     box-shadow: 0 0 0 30px $color-background inset;
     -webkit-text-fill-color: $color-light;
   }
