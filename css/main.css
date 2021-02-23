@@ -1716,7 +1716,7 @@ hr {
 
 .item-portfolio {
   margin: 0 auto;
-  width: 450px;
+  max-width: 450px;
 }
 
 .item-portfolio:not(:last-child) {
@@ -1730,12 +1730,12 @@ hr {
 
 .item-portfolio img {
   display: block;
+  width: 100%;
 }
 
 .item-portfolio .description-products {
   position: absolute;
   left: 0;
-  bottom: -100%;
   margin: 0;
   width: 450px;
   height: 294px;
@@ -1785,7 +1785,6 @@ hr {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  height: 110px;
 }
 
 .item-portfolio .item-portfolio-border .products-title {
@@ -1798,18 +1797,18 @@ hr {
   margin-top: 0;
   margin-bottom: 4px;
   margin-left: 24px;
-  width: 402px;
+  max-width: 402px;
 }
 
 @media screen and (min-width: 768px) {
   .item-portfolio .item-portfolio-border .products-title {
-    width: 306px;
+    max-width: 306px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .item-portfolio .item-portfolio-border .products-title {
-    width: 322px;
+    max-width: 322px;
   }
 }
 

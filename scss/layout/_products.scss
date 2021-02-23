@@ -18,7 +18,7 @@
 
 .item-portfolio {
   margin: 0 auto;
-  width: 450px;
+  max-width: 450px;
 
   &:not(:last-child) {
     margin-bottom: 30px;
@@ -31,12 +31,13 @@
 
   img {
     display: block;
+    width: 100%;
   }
 
   .description-products {
     position: absolute;
     left: 0;
-    bottom: -100%;
+    // bottom: -100%;
 
     margin: 0;
     width: 450px;
@@ -83,7 +84,7 @@
     border-right: 1px solid $color-border-portfolio;
     border-bottom: 1px solid $color-border-portfolio;
 
-    height: 110px;
+    // height: 110px;
 
     .products-title {
       font-weight: bold;
@@ -97,14 +98,14 @@
       margin-bottom: 4px;
       margin-left: 24px;
 
-      width: 402px;
+      max-width: 402px;
 
       @media screen and (min-width: $tablet) {
-        width: 306px;
+        max-width: 306px;
       }
 
       @media screen and (min-width: $desktop) {
-        width: 322px;
+        max-width: 322px;
       }
     }
 
